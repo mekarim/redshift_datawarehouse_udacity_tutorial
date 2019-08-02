@@ -21,13 +21,11 @@ def main():
 
     conn = psycopg2.connect("host={} dbname={} user={} password={} port={}".format(*config['CLUSTER'].values()))
     cur = conn.cursor()
-
-    #drop_tables(cur, conn)
+    
+    drop_tables(cur, conn)
     #create_tables(cur, conn)
-    print('It connects!')
+    
     conn.close()
-    print('It connects and closes!')
-
 
 if __name__ == "__main__":
     main()
