@@ -23,7 +23,7 @@ def main():
     cur = conn.cursor()
     
     drop_tables(cur, conn)
-    #create_tables(cur, conn)
+    create_tables(cur, conn)
     
     conn.close()
 
