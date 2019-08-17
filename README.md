@@ -12,9 +12,11 @@ In this project, an ETL pipeline was built which extracts the data from S3, stag
 Open the terminal and run the following:
 
 ```python create_tables.py```
+
 Drops and create tables based on sql_queries.py. sql_queries.py defines 5 tables and specifies all columns for each of these tables with the right data types and conditions.
 
 ```python etl.py```
+
 Extracts and loads log_data and song_data into staging tables in Redshift, from the S3. Performs ETL process on the staging tables to insert data correctly into the 5 tables while handling duplicate records where appropriate.
 
 ### Authors
