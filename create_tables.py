@@ -4,12 +4,17 @@ from sql_queries import create_table_queries, drop_table_queries
 
 
 def drop_tables(cur, conn):
+    ''' Drops tables based on sql_queries.py.'''
     for query in drop_table_queries:
         cur.execute(query)
         conn.commit()
 
 
 def create_tables(cur, conn):
+    '''
+        Create tables based on sql_queries.py. sql_queries.py defines 5 tables and 
+        specifies all columns for each of these with the right data types and conditions.
+    '''
     for query in create_table_queries:
         cur.execute(query)
         conn.commit()
@@ -27,5 +32,4 @@ def main():
     
     conn.close()
 
-if __name__ == "__main__":
-    main()
+if __name__ == "__main__": main()
